@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     
 </head>
-<body>
+<body class="">
+
+
 <!---Header-->
     <header>
-        <h1>Code Quiz</h1>
+        <h1 class="text-6xl text-slate-500 text-center padding-1rem py-2 px-4">Code Quiz</h1>
     </header>
 
     <!--This is where the question goes-->
@@ -21,44 +24,52 @@
         </h2>
 
         <!-- Container to hold answer option buttons -->
-        <div class="option-buttons">
+        <div class="content-start">
             
             <!-- Button for Option 1 -->
-            <button class="text-center" id="option1">[text here for answer]</button>
+            <button type="button" class="content-start bg-red-500 text-white font-bold py-2 px-4 rounded content-center" id="option1"></button>
             <!-- Button for Option 2 -->
-            <button class="text-center" id="option2">[text here for answer]</button>       
+            <button type="button" class="content-start bg-red-500 text-white font-bold py-2 px-4 rounded content-center" id="option2"></button>       
             <!-- Button for Option 3 -->
-            <button class="text-center" id="option3">[text here for answer]</button>        
+            <button type="button" class="content-start bg-red-500 text-white font-bold py-2 px-4 rounded content-center" id="option3"></button>        
             <!-- Button for Option 4 -->
-            <button class="text-center" id="option4">[text here for answer]</button>
+            <button type="button" class="content-start bg-red-500 text-white font-bold py-2 px-4 rounded content-center" id="option4"></button>
         
         <!--This tells the user if they are correct or incorrect-->
         </div>
         <p id="correct-or-incorrect">
         </p>
 
+<!--Timer-->
+<header class="content-center">
+    <h2 id="timer"></h2>
+</header>
+
  <!---Button to start the quiz-->   
-    <div class=container>
-        <button type="button" class="" id="start-button">
+    <div class="content-center">
+        <button type="button" class="bg-red-500 text-white font-bold py-2 px-4 rounded content-center" id="start-button">
             Click here to start the quiz and test your coding knowledge!
         </button>
     </div>
 
+<!--Timer-->
+    <div class="start-timer">
+
+    </div>
+
         <!--This displays saved scores-->
-        <div id="saved-scores">
+        <div id="saved-scores" class="saved-scores">
             <p id="current-stats">
-            </p>
-            <p id="expertise">
             </p>
             <form id="stats-form">
                 <div class="form-group">
-                    <input name="initials" type="text" placeholder="Enter Initials" class="text-center"/>
+                    <input name="initials" type="text" placeholder="Enter Initials" class="initials-input"/>
                 </div>
-                <div class="form-group">
-                    <button id="save-stats" type="submit" class="text-center bg-red-500 text-white font-bold py-2 px-4 rounded">Save Stats</button>
+                <div class="form-group align-center">
+                    <button id="save-stats" type="submit" class="bg-red-500 text-white font-bold py-2 px-4 rounded content-center">Save Stats</button>
                 </div>
             </form>
-            <h2 class="text-center text-white text-3xl py-2 px-4">
+            <h2 class="saved-scores">
                 Saved Scores
             </h2>
     
@@ -70,6 +81,7 @@
 
     </div>
 
- <script src="./assets/js/script.js"></script>
+
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
